@@ -88,6 +88,9 @@ class Zipkin(object):
             })
 
     def trace(self):
+        if 'zipkin' not in Zipkin.cfg or 'url' not in Zipkin.cfg['zipkin'] or not Zipkin.cfg['zipkin']['url']:
+            logging.warn('Zipkin not configured, skipping...')
+            return
         end_time = datetime.now()
         end_timestamp = time.mktime(end_time.timetuple()) * 1000 * 1000 # micro seconds
 
