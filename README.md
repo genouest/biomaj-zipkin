@@ -1,0 +1,4 @@
+deps:
+
+py-zipkin
+requests
