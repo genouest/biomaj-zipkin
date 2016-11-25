@@ -39,7 +39,7 @@ class Zipkin(object):
         return self.trace_id
 
     def get_span_id(self):
-        return self.trace_id
+        return self.span_id
 
     def add_binary_annotation(self, key, value):
         if not key or not value:
